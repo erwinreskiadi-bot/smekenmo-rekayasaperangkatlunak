@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prospek Karier RPL - Masa Depan Cerah Dunia Digital</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#090A0F',
+                            card: '#12141D',
+                            cardBorder: '#272A38',
+                            slateAccent: '#94A3B8',
+                            silver: '#E2E8F0',
+                            platinum: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #090A0F;
+            color: #E2E8F0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glow-effect {
+            box-shadow: 0 0 50px -10px rgba(148, 163, 184, 0.12);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 0%, #CBD5E1 50%, #64748B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(18, 20, 29, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+        .modal-blur {
+            backdrop-filter: blur(14px);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col justify-between selection:bg-slate-700 selection:text-white">
+
+    <!-- NAVBAR UTAMA: MENU ANTAR HALAMAN -->
+    <nav class="fixed top-0 left-0 w-full z-40 bg-neutral-950/95 backdrop-blur-md border-b border-zinc-800/70" aria-label="Navigasi utama">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 py-3">
+                <a href="index.html" class="flex items-center gap-3 no-underline">
+                    <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-zinc-700 to-slate-500 flex items-center justify-center text-zinc-100 font-bold text-lg shadow-md border border-zinc-600">
+                        <i class="fa-solid fa-code"></i>
+                    </span>
+                    <span class="font-extrabold text-lg tracking-tight text-zinc-100">RPL<span class="text-slate-400">Career</span></span>
+                </a>
+
+                <div class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm font-semibold">
+                    <a href="index.html" class="rounded-lg px-3 py-2 text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors">Home</a>
+                    <a href="informasirpl.html" class="rounded-lg px-3 py-2 text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors">Informasi RPL</a>
+                    <a href="projectsiswa.html" class="rounded-lg px-3 py-2 text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors">Projek Siswa</a>
+                    <a href="prospek_karier_jurusan_rpl.html" aria-current="page" class="rounded-lg px-3 py-2 bg-zinc-200 text-zinc-950 transition-colors">Prospek Karier</a>
+                </div>
+
+                <a href="#kuis" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold tracking-wide text-zinc-900 bg-zinc-200 rounded-lg hover:bg-white transition-all duration-200 shadow-sm border border-zinc-300">
+                    Cek Minat Kamu <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-36 pb-20 md:pt-32 md:pb-32 overflow-hidden bg-gradient-to-b from-neutral-950 via-slate-950 to-neutral-950">
+        <!-- Ambient Silver Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-slate-700/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800 text-zinc-300 text-xs font-medium mb-6">
+                <span class="w-2 h-2 rounded-full bg-zinc-400 animate-pulse"></span>
+                Satu Jurusan, Ratusan Peluang Karir Digital
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-100 max-w-4xl mx-auto leading-tight sm:leading-tight">
+                Eksplorasi Prospek Karir <span class="gradient-text">Rekayasa Perangkat Lunak</span>
+            </h1>
+            
+            <p class="mt-6 text-base sm:text-xl text-zinc-400 max-w-2xl mx-auto font-normal leading-relaxed">
+                Di mana saja kamu bisa bekerja setelah lulus RPL? Dari korporasi perbankan, startup unicorn, hingga kerja remote untuk perusahaan global.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#prospek" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-zinc-200 via-slate-300 to-zinc-400 text-zinc-950 font-bold rounded-xl hover:bg-white transition-all shadow-lg flex items-center justify-center gap-2">
+                    Jelajahi Profesi <i class="fa-solid fa-compass"></i>
+                </a>
+                <a href="#kuis" class="w-full sm:w-auto px-8 py-3.5 bg-zinc-900/80 border border-zinc-700 text-zinc-300 hover:text-white font-semibold rounded-xl hover:bg-zinc-800 transition-all flex items-center justify-center gap-2">
+                    Ikuti Kuis Karir <i class="fa-solid fa-gamepad"></i>
+                </a>
+            </div>
+
+            <!-- Visual Graphic Mockup -->
+            <div class="mt-14 relative max-w-4xl mx-auto">
+                <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-4 sm:p-6 shadow-2xl glow-effect text-left">
+                    <div class="flex items-center gap-2 mb-4 border-b border-zinc-800 pb-3">
+                        <div class="w-3 h-3 rounded-full bg-zinc-700"></div>
+                        <div class="w-3 h-3 rounded-full bg-zinc-600"></div>
+                        <div class="w-3 h-3 rounded-full bg-zinc-500"></div>
+                        <span class="ml-2 text-xs text-zinc-500 font-mono">rpl-career-matrix.json</span>
+                    </div>
+                    <pre class="font-mono text-xs sm:text-sm text-zinc-300 overflow-x-auto"><code><span class="text-slate-500">{</span>
+  <span class="text-zinc-400">"jurusan"</span>: <span class="text-zinc-200">"Rekayasa Perangkat Lunak (RPL)"</span>,
+  <span class="text-zinc-400">"fleksibilitas_kerja"</span>: <span class="text-zinc-200">"Sangat Tinggi (WFO / WFH / Remote)"</span>,
+  <span class="text-zinc-400">"sektor_industri"</span>: [
+    <span class="text-slate-400">"Banking & Corporate"</span>, <span class="text-slate-400">"Tech Startup"</span>, 
+    <span class="text-slate-400">"Game & Media Interaktif"</span>, <span class="text-slate-400">"Instansi Pemerintah & BUMN"</span>
+  ]
+<span class="text-slate-500">}</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENGAPA MEMILIH RPL -->
+    <section id="mengapa" class="py-20 bg-neutral-950 border-y border-zinc-800/80 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-zinc-100 tracking-tight">Keunggulan Lulusan RPL</h2>
+                <p class="mt-4 text-zinc-400">Menghadapi era transformasi digital dengan keahlian yang selalu dicari pasar kerja.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Advantage 1 -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-zinc-800/90 border border-zinc-700 text-zinc-200 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-zinc-100 mb-3">Lintas Sektor Industri</h3>
+                    <p class="text-zinc-400 leading-relaxed text-sm">
+                        Hampir semua instansi dan perusahaan butuh pengembang software: bank, rumah sakit, sekolah, manufaktur, hingga media.
+                    </p>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-zinc-800/90 border border-zinc-700 text-zinc-200 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-zinc-100 mb-3">Peluang Kerja Remote Global</h3>
+                    <p class="text-zinc-400 leading-relaxed text-sm">
+                        Skill koding bersifat universal. Kamu bisa bekerja dari rumah di Indonesia untuk klien atau perusahaan mancanegara.
+                    </p>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-zinc-800/90 border border-zinc-700 text-zinc-200 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-zinc-100 mb-3">Jenjang Karir & Gaji Menjanjikan</h3>
+                    <p class="text-zinc-400 leading-relaxed text-sm">
+                        Permintaan tinggi dengan jumlah talenta berbakat yang masih terbatas menjadikan profesi ini berdaya tawar tinggi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROSPEK KERJA / KATALOG -->
+    <section id="prospek" class="py-20 bg-slate-950/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <h2 class="text-3xl sm:text-4xl font-bold text-zinc-100 tracking-tight">Katalog Prospek Kerja</h2>
+                <p class="mt-4 text-zinc-400">Pilih filter atau gunakan kolom pencarian untuk menemukan informasi pekerjaan pilihanmu.</p>
+            </div>
+
+            <!-- Search Bar & Filters -->
+            <div class="max-w-md mx-auto mb-8">
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500"></i>
+                    <input type="text" id="search-input" onkeyup="handleSearch()" placeholder="Cari profesi atau tempat kerja..." class="w-full bg-zinc-900/90 border border-zinc-800 rounded-xl pl-11 pr-4 py-3 text-sm text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-zinc-500 transition-all shadow-inner">
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12" id="filter-buttons">
+                <button onclick="filterJobs('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-zinc-200 text-zinc-900 shadow-md">Semua</button>
+                <button onclick="filterJobs('corporate')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 hover:text-white hover:bg-zinc-800 transition-all">Corporate & Banking</button>
+                <button onclick="filterJobs('startup')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 hover:text-white hover:bg-zinc-800 transition-all">Startup & Agency</button>
+                <button onclick="filterJobs('remote')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 hover:text-white hover:bg-zinc-800 transition-all">Freelance & Remote</button>
+                <button onclick="filterJobs('game')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 hover:text-white hover:bg-zinc-800 transition-all">Game & Design</button>
+            </div>
+
+            <!-- Job Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="jobs-container">
+                <!-- Generated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- KUIS INTERAKTIF -->
+    <section id="kuis" class="py-20 bg-neutral-950 border-t border-zinc-800 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-zinc-900/90 border border-zinc-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                <div class="text-center mb-8">
+                    <span class="inline-block px-3 py-1 rounded-full bg-zinc-800 border border-zinc-700 text-zinc-300 text-xs font-semibold mb-3">Interactive Test</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-zinc-100">Karier RPL Mana yang Cocok Untukmu?</h2>
+                    <p class="text-zinc-400 text-sm mt-2">Jawab pertanyaan singkat ini untuk rekomendasi peminatan karir terbaik.</p>
+                </div>
+
+                <!-- Quiz Form Container -->
+                <div id="quiz-box" class="space-y-6">
+                    <!-- Question 1 -->
+                    <div class="quiz-step" id="step-1">
+                        <h3 class="text-lg font-semibold text-zinc-200 mb-4">1. Apa aspek teknologi yang paling menarik minatmu saat menggunakan produk digital?</h3>
+                        <div class="space-y-3">
+                            <button onclick="selectAnswer(1, 'design')" class="quiz-opt w-full text-left p-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all text-sm font-medium text-zinc-300">
+                                🎨 Keindahan desain visual, antarmuka pengguna, dan pengalaman pakai yang mudah.
+                            </button>
+                            <button onclick="selectAnswer(1, 'dev')" class="quiz-opt w-full text-left p-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all text-sm font-medium text-zinc-300">
+                                💻 Logika di balik layar, pemrosesan data, dan pembuatan fitur-fitur pintar.
+                            </button>
+                            <button onclick="selectAnswer(1, 'game')" class="quiz-opt w-full text-left p-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all text-sm font-medium text-zinc-300">
+                                🕹️ Grafis interaktif, dunia 3D, serta mekanika permainan (Game Mechanics).
+                            </button>
+                            <button onclick="selectAnswer(1, 'infra')" class="quiz-opt w-full text-left p-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all text-sm font-medium text-zinc-300">
+                                ⚙️ Keamanan sistem, jaringan, komputer, dan memastikan segalanya bebas error.
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="quiz-step hidden" id="step-2">
+                        <h3 class="text-lg font-semibold text-zinc-200 mb-4">2. Suasana lingkungan kerja seperti apa yang paling kamu harapkan?</h3>
+                        <div class="space-y-3">
+                            <button onclick="selectAnswer(2, 'remote')" class="quiz-opt w-full text-left p-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all text-sm font-medium text-zinc-300">
+                                ☕ Jam kerja fleksibel, bisa beroperasi dari mana saja (Remote/Freelance).
+                            </button>
+                            <button onclick="selectAnswer(2, 'corporate')" class="quiz-opt w-full text-left p-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all text-sm font-medium text-zinc-300">
+                                🏛️ Kantor formal, stabil, ada jenjang jabatan jelas (Bank, BUMN, Industri).
+                            </button>
+                            <button onclick="selectAnswer(2, 'startup')" class="quiz-opt w-full text-left p-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all text-sm font-medium text-zinc-300">
+                                🚀 Lingkungan Startup yang serba cepat, kolaboratif, dan kasual.
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="quiz-step hidden" id="step-3">
+                        <h3 class="text-lg font-semibold text-zinc-200 mb-4">3. Keterampilan utama apa yang ingin paling kamu tonjolkan?</h3>
+                        <div class="space-y-3">
+                            <button onclick="selectAnswer(3, 'problem')" class="quiz-opt w-full text-left p-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all text-sm font-medium text-zinc-300">
+                                🧠 Problem Solving, logika algoritma, dan pemrograman tingkat lanjut.
+                            </button>
+                            <button onclick="selectAnswer(3, 'detail')" class="quiz-opt w-full text-left p-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all text-sm font-medium text-zinc-300">
+                                🔍 Ketelitian tinggi, menguji kesalahan sistem, dan perbaikan jaringan.
+                            </button>
+                            <button onclick="selectAnswer(3, 'art')" class="quiz-opt w-full text-left p-4 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all text-sm font-medium text-zinc-300">
+                                🎨 Kreativitas seni visual dan pemahaman psikologi pengguna.
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Result Box -->
+                    <div id="quiz-result" class="hidden text-center py-6">
+                        <div class="w-16 h-16 bg-zinc-800 border border-zinc-700 text-zinc-200 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-zinc-100 mb-2">Rekomendasi Profesi Paling Cocok:</h3>
+                        <div id="result-title" class="text-2xl sm:text-3xl font-extrabold text-slate-300 mb-4"></div>
+                        <p id="result-desc" class="text-zinc-400 text-sm max-w-lg mx-auto leading-relaxed mb-6"></p>
+                        <button onclick="resetQuiz()" class="px-6 py-2.5 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-zinc-200 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all">
+                            <i class="fa-solid fa-rotate-right ml-1"></i> Ulangi Kuis
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-neutral-950 border-t border-zinc-900 py-8 text-center text-zinc-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 RPL Career Information Center — Designed with Monochromatic Slate Palette.</p>
+        </div>
+    </footer>
+
+    <!-- DETAIL MODAL -->
+    <div id="job-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 modal-blur opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-zinc-900 border border-zinc-700 w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300" id="modal-content">
+            <div class="p-6 sm:p-8 relative">
+                <!-- Close Button -->
+                <button onclick="closeModal()" class="absolute top-5 right-5 text-zinc-400 hover:text-white bg-zinc-800 w-8 h-8 rounded-full flex items-center justify-center transition-all">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <!-- Modal Header -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div id="modal-icon" class="w-14 h-14 rounded-xl flex items-center justify-center text-2xl bg-zinc-800 border border-zinc-700 text-zinc-200"></div>
+                    <div>
+                        <h3 id="modal-title" class="text-xl font-bold text-zinc-100"></h3>
+                        <span id="modal-category" class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-zinc-800 text-zinc-300 border border-zinc-700"></span>
+                    </div>
+                </div>
+
+                <!-- Modal Details -->
+                <div class="space-y-5 text-sm">
+                    <div>
+                        <h4 class="text-xs uppercase font-semibold text-zinc-400 tracking-wider mb-1">Tugas & Tanggung Jawab Utama</h4>
+                        <p id="modal-desc" class="text-zinc-300 leading-relaxed"></p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs uppercase font-semibold text-zinc-400 tracking-wider mb-2">Di Mana Saja Bisa Bekerja?</h4>
+                        <div id="modal-places" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs uppercase font-semibold text-zinc-400 tracking-wider mb-2">Skill Utama Yang Dibutuhkan</h4>
+                        <div id="modal-skills" class="flex flex-wrap gap-1.5"></div>
+                    </div>
+
+                    <div class="pt-4 border-t border-zinc-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-zinc-400 block">Estimasi Gaji (Entry to Mid Level)</span>
+                            <span id="modal-salary" class="text-lg font-bold text-zinc-100"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // DATA PROSPEK KERJA RPL (LENGKAP)
+        const jobData = [
+            {
+                id: 'se',
+                title: 'Software Developer / Engineer',
+                category: 'corporate',
+                icon: 'fa-solid fa-laptop-code',
+                shortDesc: 'Merancang, membangun, dan memelihara aplikasi & sistem perangkat lunak utama.',
+                desc: 'Software Engineer bertugas menganalisis kebutuhan sistem, menulis kode yang terstruktur, menguji perangkat lunak, dan memelihara aplikasi agar berjalan lancar tanpa kendala.',
+                places: ['Perusahaan IT & Software House', 'Perbankan (BCA, Mandiri, BRI)', 'Startup Unicorn / Decacorn', 'BUMN & Korporasi Multinasional'],
+                skills: ['Java / C# / Golang', 'Struktur Data & Algoritma', 'System Architecture', 'Git / Version Control', 'Agile Methodology'],
+                salary: 'Rp 7.000.000 - Rp 16.000.000 / bln'
+            },
+            {
+                id: 'webdev',
+                title: 'Web Developer',
+                category: 'startup',
+                icon: 'fa-solid fa-code',
+                shortDesc: 'Mengembangkan platform website responsif (Frontend, Backend, atau Fullstack).',
+                desc: 'Bekerja membangun situs web dari skala UMKM hingga portal besar. Bertanggung jawab atas visual (Frontend), database & server (Backend), atau keduanya (Fullstack).',
+                places: ['Digital Agency', 'E-Commerce (Tokopedia, Shopee)', 'Software House', 'Perusahaan Media Online'],
+                skills: ['HTML/CSS/JavaScript', 'React.js / Vue.js / Next.js', 'Node.js / Laravel / Python', 'REST API & Database'],
+                salary: 'Rp 6.000.000 - Rp 13.000.000 / bln'
+            },
+            {
+                id: 'mobile',
+                title: 'Mobile App Developer',
+                category: 'startup',
+                icon: 'fa-solid fa-mobile-screen-button',
+                shortDesc: 'Membuat aplikasi berbasis iOS dan Android untuk smartphone & tablet.',
+                desc: 'Fokus pada pengembangan aplikasi ponsel cerdas modern yang hemat daya, aman, serta memiliki performa interaktif tinggi.',
+                places: ['Startup Fintech & Ojol', 'Retail & E-Commerce', 'Tech Giants', 'Bank Digital'],
+                skills: ['Flutter / React Native', 'Kotlin (Android)', 'Swift (iOS)', 'REST API Integration'],
+                salary: 'Rp 6.500.000 - Rp 14.000.000 / bln'
+            },
+            {
+                id: 'gameui',
+                title: 'Game Dev & UI/UX Designer',
+                category: 'game',
+                icon: 'fa-solid fa-gamepad',
+                shortDesc: 'Mendesain game interaktif atau merancang tampilan aplikasi yang intuitif.',
+                desc: 'Gabungan seni kreatif dan logika koding. Membuat alur mekanika game 2D/3D atau merancang layout aplikasi yang mudah dipakai pengguna.',
+                places: ['Studio Game Lokal & Global', 'Media Interaktif', 'Creative Digital Agency', 'Startup Product Studio'],
+                skills: ['Unity 3D / C#', 'Figma / Adobe XD', 'Wireframing & Prototyping', 'User Research'],
+                salary: 'Rp 5.500.000 - Rp 12.000.000 / bln'
+            },
+            {
+                id: 'qa',
+                title: 'Quality Assurance (QA) Tester',
+                category: 'corporate',
+                icon: 'fa-solid fa-bug-slash',
+                shortDesc: 'Menguji aplikasi untuk memastikan bebas bug dan aman sebelum rilis.',
+                desc: 'Bertanggung jawab melakukan testing otomatis dan manual pada perangkat lunak, mencari kecacatan sistem, dan memastikan kriteria standar kualitas terpenuhi.',
+                places: ['Perusahaan FinTech & Payment Gateway', 'Instansi Pemerintah', 'Perbankan', 'Perusahaan Konsultan IT'],
+                skills: ['Software Testing Manual', 'Selenium / Cypress (Automation)', 'Bug Tracking (Jira)', 'API Testing (Postman)'],
+                salary: 'Rp 5.500.000 - Rp 11.000.000 / bln'
+            },
+            {
+                id: 'freelance',
+                title: 'Freelancer / Remote Worker',
+                category: 'remote',
+                icon: 'fa-solid fa-laptop-house',
+                shortDesc: 'Bekerja secara independen menangani proyek web/aplikasi dari klien global.',
+                desc: 'Kebebasan penuh memilih waktu dan tempat kerja. Mengerjakan berbagai proyek pembuatan software untuk klien internasional dengan penghasilan mata uang asing.',
+                places: ['Platform Remote (Upwork, Fiverr)', 'Klien Internasional', 'Perusahaan Luar Negeri (WFH)', 'Produk Digital SaaS Mandiri'],
+                skills: ['Fullstack Web / Mobile', 'Komunikasi Bahasa Inggris', 'Manajemen Waktu', 'Problem Solving Mandiri'],
+                salary: '$600 - $3,500+ USD / bln'
+            },
+            {
+                id: 'itsupport',
+                title: 'IT Support & Systems Administrator',
+                category: 'corporate',
+                icon: 'fa-solid fa-server',
+                shortDesc: 'Mengelola server, jaringan internal, hardware, dan sistem infrastruktur kantor.',
+                desc: 'Memastikan seluruh perangkat keras, basis data, jaringan internet, dan sistem komputer operasional perusahaan beroperasi tanpa hambatan.',
+                places: ['Sekolah / Universitas', 'Rumah Sakit', 'Pabrik & Manufaktur', 'Kantor Pemerintahan'],
+                skills: ['Linux / Windows Server', 'Networking (TCP/IP, LAN)', 'Hardware Troubleshooting', 'Database Maintenance'],
+                salary: 'Rp 4.500.000 - Rp 9.000.000 / bln'
+            }
+        ];
+
+        let activeCategory = 'all';
+
+        // RENDER CARDS
+        function renderJobs(dataToRender = jobData) {
+            const container = document.getElementById('jobs-container');
+            container.innerHTML = '';
+
+            if (dataToRender.length === 0) {
+                container.innerHTML = `<div class="col-span-full text-center py-10 text-zinc-500 font-medium">Tidak ada profesi yang cocok dengan kata kunci pencarian.</div>`;
+                return;
+            }
+
+            dataToRender.forEach(job => {
+                const card = document.createElement('div');
+                card.className = "glass-card p-6 rounded-2xl flex flex-col justify-between cursor-pointer group transition-all duration-300";
+                card.onclick = () => openModal(job.id);
+
+                card.innerHTML = `
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-zinc-800 border border-zinc-700 text-zinc-200 flex items-center justify-center text-xl mb-4 group-hover:bg-zinc-700 transition-colors">
+                            <i class="${job.icon}"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-zinc-100 mb-2 group-hover:text-white transition-colors">${job.title}</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed mb-4">${job.shortDesc}</p>
+                    </div>
+                    <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs font-semibold text-zinc-300">
+                        <span>Detail Spesifikasi</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // FILTER LOGIC
+        function filterJobs(cat) {
+            activeCategory = cat;
+            document.getElementById('search-input').value = '';
+            
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.className = "filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-zinc-400 bg-zinc-900 border border-zinc-800 hover:text-white hover:bg-zinc-800 transition-all";
+            });
+            event.target.className = "filter-btn active px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-zinc-200 text-zinc-900 shadow-md";
+
+            const filtered = cat === 'all' ? jobData : jobData.filter(j => j.category === cat);
+            renderJobs(filtered);
+        }
+
+        // LIVE SEARCH LOGIC
+        function handleSearch() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const filtered = jobData.filter(job => {
+                const matchesCat = activeCategory === 'all' || job.category === activeCategory;
+                const matchesQuery = job.title.toLowerCase().includes(query) || 
+                                     job.desc.toLowerCase().includes(query) || 
+                                     job.places.some(p => p.toLowerCase().includes(query));
+                return matchesCat && matchesQuery;
+            });
+            renderJobs(filtered);
+        }
+
+        // MODAL LOGIC
+        function openModal(id) {
+            const job = jobData.find(j => j.id === id);
+            if (!job) return;
+
+            document.getElementById('modal-icon').innerHTML = `<i class="${job.icon}"></i>`;
+            document.getElementById('modal-title').innerText = job.title;
+            document.getElementById('modal-category').innerText = job.category.toUpperCase();
+            document.getElementById('modal-desc').innerText = job.desc;
+            document.getElementById('modal-salary').innerText = job.salary;
+
+            // Places tags
+            document.getElementById('modal-places').innerHTML = job.places.map(p => 
+                `<span class="bg-zinc-950 border border-zinc-800 text-zinc-300 px-3 py-1 rounded-lg text-xs font-medium"><i class="fa-solid fa-building text-zinc-400 mr-1.5"></i>${p}</span>`
+            ).join('');
+
+            // Skills tags
+            document.getElementById('modal-skills').innerHTML = job.skills.map(s => 
+                `<span class="bg-zinc-800 border border-zinc-700 text-zinc-200 px-2.5 py-1 rounded-md text-xs font-mono">${s}</span>`
+            ).join('');
+
+            const modal = document.getElementById('job-modal');
+            const content = document.getElementById('modal-content');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            content.classList.remove('scale-95');
+            content.classList.add('scale-100');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('job-modal');
+            const content = document.getElementById('modal-content');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            content.classList.remove('scale-100');
+            content.classList.add('scale-95');
+        }
+
+        // QUIZ LOGIC
+        let quizAnswers = {};
+
+        function selectAnswer(step, cat) {
+            quizAnswers[step] = cat;
+            document.getElementById(`step-${step}`).classList.add('hidden');
+
+            if (step < 3) {
+                document.getElementById(`step-${step + 1}`).classList.remove('hidden');
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function showQuizResult() {
+            document.getElementById('quiz-result').classList.remove('hidden');
+            
+            let title = "Software Developer / Fullstack Engineer";
+            let desc = "Kombinasi logika koding yang kuat dan minat teknis membawamu cocok berkarier sebagai pengembang sistem software secara menyeluruh!";
+
+            if (quizAnswers[1] === 'design' || quizAnswers[3] === 'art') {
+                title = "UI/UX Designer & Game Dev";
+                title = "Kamu berorientasi tinggi pada visual dan kenyamanan antarmuka. Profesi di studio game atau perancangan tampilan produk sangat cocok untukmu!";
+            } else if (quizAnswers[1] === 'infra' || quizAnswers[3] === 'detail') {
+                title = "QA Tester & IT Systems Administrator";
+                desc = "Ketelitian dan keinginan menjaga kestabilan sistem adalah modal utamamu. Perusahaan finansial dan manufaktur butuh talenta sepertimu!";
+            } else if (quizAnswers[2] === 'remote') {
+                title = "Global Remote Developer / Freelancer";
+                desc = "Kamu menyukai fleksibilitas tinggi. Menjadi pengembang perangkat lunak independen untuk klien mancanegara adalah pilihan pas!";
+            }
+
+            document.getElementById('result-title').innerText = title;
+            document.getElementById('result-desc').innerText = desc;
+        }
+
+        function resetQuiz() {
+            quizAnswers = {};
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('step-1').classList.remove('hidden');
+            document.getElementById('step-2').classList.add('hidden');
+            document.getElementById('step-3').classList.add('hidden');
+        }
+
+        window.onload = () => {
+            renderJobs();
+        };
+    </script>
+</body>
+</html>

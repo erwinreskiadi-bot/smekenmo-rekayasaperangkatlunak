@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SMK NEGERI MOJOAGUNG</title>
+    <style>
+      /* Mengatur seluruh halaman */
+
+      /* NAVBAR UTAMA */
+      .navbar {
+        background-color: #333333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 15px;
+        width: 100%;
+      }
+
+      /* Link pada navbar */
+      .navbar a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 10px 16px;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      /* Efek ketika kursor diarahkan ke menu */
+      .navbar a:hover {
+        background-color: #ffd700;
+        color: #202124;
+      }
+
+      /* Menandai halaman Home yang aktif */
+      .navbar a.aktif {
+        background-color: #ffd700;
+        color: #202124;
+      }
+
+      /* NAVBAR RESPONSIF UNTUK HP */
+      @media (max-width: 480px) {
+        .navbar {
+          gap: 5px;
+          padding: 10px 5px;
+        }
+
+        .navbar a {
+          font-size: 12px;
+          padding: 9px 10px;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #ffffff;
+        color: #202124;
+      }
+
+      /* HEADER: Logo dan nama sekolah */
+      .block {
+        background-color: #202124;
+        color: #ffd700;
+        width: 100%;
+        min-height: 120px;
+        padding: 15px 25px;
+
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      /* Logo sekolah */
+      .block img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+      }
+
+      /* Teks identitas sekolah */
+      .teks {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .teks h1 {
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .teks p {
+        color: white;
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      /* GAMBAR UTAMA */
+      .utama img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* BAGIAN VISI DAN MISI */
+      .visi-misi {
+        display: flex;
+        gap: 20px;
+        padding: 25px;
+        align-items: stretch;
+      }
+
+      /* Kotak visi dan misi */
+      .teks1,
+      .teks2 {
+        flex: 1;
+        background-color: #f4f4f4;
+        padding: 25px;
+        border-radius: 10px;
+
+        /* Border dan shadow */
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+      }
+      /* Judul visi dan misi */
+      .teks1 h2,
+      .teks2 h2 {
+        font-size: 22px;
+        color: #202124;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      /* Paragraf visi */
+      .teks1 p {
+        font-size: 15px;
+        line-height: 1.8;
+        text-align: center;
+      }
+
+      /* Daftar misi */
+      .teks2 ul {
+        font-size: 14px;
+        line-height: 1.8;
+        padding-left: 20px;
+        margin-bottom: 0;
+      }
+
+      .teks2 li {
+        margin-bottom: 8px;
+      }
+
+      /* BAGIAN MENGENAL SEKOLAH DAN JURUSAN
+           Diletakkan di bawah kotak visi dan misi */
+      .teks3 {
+        margin: 0 25px 30px;
+        padding: 30px;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      }
+
+      .teks3 h2 {
+        font-size: 22px;
+        color: #202124;
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      .teks3 p {
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 15px;
+      }
+
+      /* Daftar jurusan */
+      .teks3 ul {
+        padding-left: 25px;
+        line-height: 1.9;
+        margin-bottom: 25px;
+      }
+
+      .teks3 li {
+        margin-bottom: 5px;
+      }
+
+      /* Judul khusus jurusan RPL */
+      .teks3 .judul-rpl {
+        border-left: 5px solid #ffd700;
+        padding-left: 12px;
+        margin-top: 25px;
+      }
+
+      /* FOOTER: Sama dengan background header */
+      footer {
+        background-color: #202124;
+        color: #ffd700;
+        text-align: center;
+        padding: 25px 15px;
+        margin-top: 20px;
+      }
+
+      footer h3 {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      footer p {
+        color: white;
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 8px 0;
+      }
+
+      footer .copyright {
+        font-size: 12px;
+        color: #cccccc;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid #555555;
+      }
+
+      /* RESPONSIVE UNTUK TABLET DAN HP */
+      @media (max-width: 768px) {
+        .block {
+          padding: 15px;
+          gap: 10px;
+        }
+
+        .block img {
+          width: 65px;
+          height: 65px;
+        }
+
+        .teks h1 {
+          font-size: 19px;
+        }
+
+        .teks p {
+          font-size: 11px;
+        }
+
+        .utama img {
+          height: 250px;
+        }
+
+        /* Visi dan misi menjadi vertikal */
+        .visi-misi {
+          flex-direction: column;
+          padding: 20px;
+          gap: 20px;
+        }
+
+        .teks1,
+        .teks2 {
+          width: 100%;
+        }
+
+        /* Teks 3 tetap berada di bawah visi dan misi */
+        .teks3 {
+          margin: 0 20px 25px;
+          padding: 22px;
+        }
+
+        .teks3 h2 {
+          font-size: 19px;
+        }
+      }
+
+      /* RESPONSIVE UNTUK HP KECIL */
+      @media (max-width: 480px) {
+        .block img {
+          width: 55px;
+          height: 55px;
+        }
+
+        .teks h1 {
+          font-size: 16px;
+        }
+
+        .teks p {
+          font-size: 10px;
+        }
+
+        .utama img {
+          height: 200px;
+        }
+
+        .visi-misi {
+          padding: 15px;
+        }
+
+        .teks1,
+        .teks2 {
+          padding: 18px;
+        }
+
+        .teks1 h2,
+        .teks2 h2 {
+          font-size: 20px;
+        }
+
+        .teks3 {
+          margin: 0 15px 20px;
+          padding: 18px;
+        }
+
+        .teks3 p,
+        .teks3 ul {
+          font-size: 14px;
+        }
+
+        footer h3 {
+          font-size: 17px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="informasirpl.html" class="aktif">Informasi RPL</a>
+        <a href="projectsiswa.html">Projek Siswa</a>
+        <a href="prospek_karier_jurusan_rpl.html"> Prospek Karier </a>
+      </nav>
+    </header>
+    <!-- HEADER: LOGO DAN IDENTITAS SEKOLAH -->
+    <header class="block">
+      <img
+        src="https://smknegerimojoagung.sch.id/wp-content/uploads/2025/11/cropped-cropped-cropped-SMEKENMO-1.png"
+        alt="Logo SMK Negeri Mojoagung"
+      />
+
+      <div class="teks">
+        <h1>SMK NEGERI MOJOAGUNG</h1>
+
+        <p>
+          Jl. Raya Veteran No. 66, Miagan, Kecamatan Mojoagung, Kabupaten
+          Jombang, Jawa Timur 61482
+        </p>
+      </div>
+    </header>
+
+    <!-- GAMBAR UTAMA SEKOLAH -->
+    <section class="utama">
+      <img
+        src="https://cdn-jpr.jawapos.com/images/2/radarjombang/2022/09/img-slide-2.jpg"
+        alt="Gambar SMK Negeri Mojoagung"
+      />
+    </section>
+
+    <!-- KOTAK VISI DAN MISI -->
+    <section class="visi-misi">
+      <!-- VISI SEKOLAH -->
+      <div class="teks1">
+        <h2>VISI</h2>
+
+        <p>
+          “Terwujudnya lulusan yang kompeten, berjiwa wirausaha, dan SeTIA
+          (Sehat, Tanggung Jawab, Inovatif, dan Aktif).”
+        </p>
+      </div>
+
+      <!-- MISI SEKOLAH -->
+      <div class="teks2">
+        <h2>MISI</h2>
+
+        <ul>
+          <li>Menyelenggarakan pendidikan vokasi yang berkualitas.</li>
+
+          <li>
+            Menanamkan nilai-nilai karakter Profil Pelajar Pancasila dan jiwa
+            wirausaha kepada peserta didik.
+          </li>
+
+          <li>
+            Mengembangkan sarana dan prasarana pendidikan yang memadai untuk
+            mendukung pembelajaran inovatif.
+          </li>
+
+          <li>Membangun kerja sama dengan industri dan dunia kerja (IDUKA).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TEKS 3: BERADA DI BAWAH KOTAK VISI DAN MISI -->
+    <section class="teks3">
+      <h2>MENGENAL SMK NEGERI MOJOAGUNG</h2>
+
+      <p>
+        SMK Negeri Mojoagung merupakan sekolah menengah kejuruan yang berfokus
+        pada pendidikan dan pengembangan keterampilan peserta didik untuk
+        menghadapi tantangan masa depan.
+      </p>
+
+      <h2>PENDIDIKAN KEJURUAN</h2>
+
+      <p>
+        SMK Negeri Mojoagung memiliki berbagai bidang keahlian yang dapat
+        dipelajari oleh peserta didik.
+      </p>
+
+      <ul>
+        <li>Akuntansi</li>
+        <li>Teknik Kimia Industri</li>
+        <li>Rekayasa Perangkat Lunak</li>
+        <li>Manajemen Perkantoran</li>
+        <li>Bisnis Digital</li>
+      </ul>
+
+      <h2 class="judul-rpl">REKAYASA PERANGKAT LUNAK (RPL)</h2>
+
+      <p>
+        Rekayasa Perangkat Lunak (RPL) adalah bidang keahlian yang mempelajari
+        proses pembuatan, pengembangan, pengujian, dan pemeliharaan perangkat
+        lunak.
+      </p>
+
+      <p>
+        Melalui jurusan RPL, peserta didik dapat belajar HTML, CSS, JavaScript,
+        pemrograman, pengelolaan database, serta pembuatan website dan aplikasi.
+      </p>
+
+      <p>
+        <strong>
+          Belajar teknologi, membangun aplikasi, dan menciptakan solusi digital
+          untuk masa depan.
+        </strong>
+      </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <h3>SMK NEGERI MOJOAGUNG</h3>
+
+      <p>Informasi Jurusan Rekayasa Perangkat Lunak</p>
+
+      <p class="copyright">&copy; 2026 SMK Negeri Mojoagung</p>
+    </footer>
+  </body>
+</html>
+```

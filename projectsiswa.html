@@ -1,0 +1,577 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Showcase Projek Siswa RPL</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        /* PENGATURAN DASAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333333;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #202124;
+            color: #ffffff;
+            text-align: center;
+            padding: 55px 20px;
+            border-bottom: 5px solid #ffd700;
+        }
+
+        header h1 {
+            color: #ffd700;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            max-width: 750px;
+            margin: 0 auto;
+            color: #eeeeee;
+            font-size: 15px;
+        }
+
+        /* NAVIGASI */
+        nav {
+            background-color: #333333;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffd700;
+            color: #202124;
+        }
+
+        /* JUDUL BAGIAN */
+        .section-title {
+            text-align: center;
+            padding: 40px 20px 10px;
+        }
+
+        .section-title h2 {
+            font-size: 27px;
+            color: #202124;
+        }
+
+        .section-title p {
+            color: #777777;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .garis {
+            width: 70px;
+            height: 4px;
+            background-color: #ffd700;
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+
+        /* CONTAINER PROYEK */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 30px;
+        }
+
+        /* KARTU PROYEK */
+        .project-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+        }
+
+        /* GALERI GAMBAR */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            padding: 15px;
+            background-color: #e9ecef;
+        }
+
+        /* Jika proyek hanya mempunyai satu gambar */
+        .image-gallery.single {
+            grid-template-columns: 1fr;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: 190px;
+            object-fit: contain;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 7px;
+            padding: 4px;
+        }
+
+        /* ISI KARTU */
+        .project-content {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .project-number {
+            color: #997d00;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .project-title {
+            color: #202124;
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .project-description {
+            color: #555555;
+            font-size: 14px;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* LABEL TEKNOLOGI */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .tag {
+            background-color: #fff4b8;
+            color: #554600;
+            padding: 5px 11px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        /* BAGIAN PENUTUP */
+        .penutup {
+            background-color: #eeeeee;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .penutup h2 {
+            color: #202124;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .penutup p {
+            max-width: 750px;
+            margin: 0 auto;
+            color: #666666;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #202124;
+            color: #ffd700;
+            text-align: center;
+            padding: 25px 15px;
+            border-top: 4px solid #ffd700;
+        }
+
+        footer h3 {
+            font-size: 19px;
+            margin-bottom: 5px;
+        }
+
+        footer p {
+            color: #eeeeee;
+            font-size: 13px;
+        }
+
+        footer .copyright {
+            margin-top: 15px;
+            padding-top: 12px;
+            border-top: 1px solid #555555;
+            color: #bbbbbb;
+            font-size: 12px;
+        }
+
+        /* RESPONSIVE TABLET */
+        @media (max-width: 850px) {
+            .container {
+                grid-template-columns: 1fr;
+                max-width: 650px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+        }
+
+        /* RESPONSIVE HP */
+        @media (max-width: 480px) {
+            header {
+                padding: 35px 15px;
+            }
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            header p {
+                font-size: 13px;
+            }
+
+            nav {
+                gap: 3px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 7px 9px;
+            }
+
+            .section-title h2 {
+                font-size: 22px;
+            }
+
+            .container {
+                padding: 20px 14px 40px;
+                gap: 22px;
+            }
+
+            .image-gallery img {
+                height: 135px;
+            }
+
+            .project-content {
+                padding: 18px;
+            }
+
+            .project-title {
+                font-size: 18px;
+            }
+
+            .project-description {
+                font-size: 13px;
+            }
+
+            .penutup h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="informasirpl.html" class="aktif">Informasi RPL</a>
+        <a href="projectsiswa.html">Projek Siswa</a>
+        <a href="prospek_karier_jurusan_rpl.html"> Prospek Karier </a>
+      </nav>
+    </header>
+    <!-- HEADER -->
+    <header>
+        <h1>SHOWCASE PROJEK SISWA RPL</h1>
+
+        <p>
+            Kumpulan karya dan aplikasi yang dikembangkan melalui
+            pembelajaran Rekayasa Perangkat Lunak.
+            Kenali proses coding, logika pemrograman, dan pengembangan aplikasi.
+        </p>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav>
+        <a href="#kalkulator">Kalkulator</a>
+        <a href="#perpustakaan">Perpustakaan</a>
+        <a href="#restoran">Restoran</a>
+        <a href="#oop">Pemrograman OOP</a>
+        <a href="#kendaraan">Kendaraan</a>
+    </nav>
+
+    <!-- JUDUL PROYEK -->
+    <section class="section-title">
+        <h2>Galeri Projek</h2>
+        <div class="garis"></div>
+
+        <p>
+            Dokumentasi tampilan aplikasi dan kode program siswa.
+        </p>
+    </section>
+
+    <!-- DAFTAR PROYEK -->
+    <main class="container">
+
+        <!-- PROYEK 1: KALKULATOR -->
+        <article class="project-card" id="kalkulator">
+
+            <div class="image-gallery single">
+                <img
+                    src="WhatsApp Image 2026-10-28 at 18.13.08.jpeg"
+                    alt="Tampilan desain kalkulator digital di NetBeans"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="project-content">
+                <span class="project-number">PROYEK 01</span>
+
+                <h2 class="project-title">
+                    Aplikasi Kalkulator Digital
+                </h2>
+
+                <p class="project-description">
+                    Aplikasi kalkulator berbasis Java Swing yang dibuat
+                    menggunakan GUI Builder di NetBeans. Tampilan aplikasi
+                    memiliki layar hasil perhitungan dan tombol angka,
+                    desimal, serta operator matematika. Proyek ini dapat
+                    digunakan untuk mempelajari desain antarmuka dan
+                    logika operasi aritmatika.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Swing GUI</span>
+                    <span class="tag">Aritmatika</span>
+                    <span class="tag">UI/UX</span>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- PROYEK 2: PERPUSTAKAAN -->
+        <article class="project-card" id="perpustakaan">
+
+            <div class="image-gallery">
+                <img
+                    src="WhatsApp Image2 2026-10-28 at 18.13.08.jpeg"
+                    alt="Kode Java sistem informasi perpustakaan"
+                    loading="lazy"
+                >
+
+                <img
+                    src="WhatsApp Image6 2026-10-28 at 18.13.09.jpeg"
+                    alt="Hasil program perpustakaan berupa menu dan informasi buku"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="project-content">
+                <span class="project-number">PROYEK 02</span>
+
+                <h2 class="project-title">
+                    Sistem Informasi Perpustakaan
+                </h2>
+
+                <p class="project-description">
+                    Program perpustakaan berbasis Java yang menampilkan
+                    menu untuk melihat informasi buku, meminjam buku,
+                    mengembalikan buku, dan keluar dari program.
+                    Contoh ini menggunakan konsep class dan object
+                    untuk mengelola informasi buku serta stoknya.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">OOP</span>
+                    <span class="tag">Class & Object</span>
+                    <span class="tag">Menu Interaktif</span>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- PROYEK 3: RESTORAN -->
+        <article class="project-card" id="restoran">
+
+            <div class="image-gallery">
+                <img
+                    src="WhatsApp Image7 2026-10-28 at 18.13.09.jpeg"
+                    alt="Kode Java program pemesanan restoran"
+                    loading="lazy"
+                >
+
+                <img
+                    src="WhatsApp Image8 2026-10-28 at 18.13.10.jpeg"
+                    alt="Output program restoran yang menampilkan pesanan dan total pembayaran"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="project-content">
+                <span class="project-number">PROYEK 03</span>
+
+                <h2 class="project-title">
+                    Sistem Pemesanan Restoran Digital
+                </h2>
+
+                <p class="project-description">
+                    Program berbasis Java untuk menampilkan menu
+                    makanan dan minuman, menerima pilihan pesanan,
+                    serta menghitung total pembayaran. Hasil program
+                    memperlihatkan pesanan Ayam Geprek dan Es Teh,
+                    jumlah pesanan, dan total biaya secara otomatis.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Scanner</span>
+                    <span class="tag">Switch Case</span>
+                    <span class="tag">Perhitungan Harga</span>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- PROYEK 4: OOP SISWA -->
+        <article class="project-card" id="oop">
+
+            <div class="image-gallery single">
+                <img
+                    src="WhatsApp Image4 2026-10-28 at 18.13.09.jpeg"
+                    alt="Kode Java contoh class Mahasiswa, Siswa, dan pewarisan"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="project-content">
+                <span class="project-number">PROYEK 04</span>
+
+                <h2 class="project-title">
+                    Contoh Pemrograman Berorientasi Objek
+                </h2>
+
+                <p class="project-description">
+                    Contoh program Java yang menggunakan class,
+                    object, method, dan pewarisan (inheritance).
+                    Program membuat objek siswa bernama Reiga,
+                    menampilkan nama siswa, lalu memanggil method
+                    untuk menunjukkan proses belajar. Contoh ini
+                    membantu memahami hubungan antarkelas dalam OOP.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">OOP</span>
+                    <span class="tag">Inheritance</span>
+                    <span class="tag">Method</span>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- PROYEK 5: KENDARAAN -->
+        <article class="project-card" id="kendaraan">
+
+            <div class="image-gallery single">
+                <img
+                    src="WhatsApp Image5 2026-10-28 at 18.13.09.jpeg"
+                    alt="Kode Java contoh class Kendaraan dan objek Mobil"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="project-content">
+                <span class="project-number">PROYEK 05</span>
+
+                <h2 class="project-title">
+                    Program Kendaraan dengan Konsep OOP
+                </h2>
+
+                <p class="project-description">
+                    Program Java yang membuat objek Mobil dengan merek
+                    Toyota. Program menampilkan merek kendaraan,
+                    memanggil method suara, dan menunjukkan perilaku
+                    kendaraan melalui method jalan. Contoh ini
+                    memperkenalkan penggunaan class, object, method,
+                    dan pewarisan pada pemrograman berorientasi objek.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Class & Object</span>
+                    <span class="tag">Method</span>
+                    <span class="tag">Inheritance</span>
+                </div>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- PENUTUP -->
+    <section class="penutup">
+        <h2>Belajar Coding, Ciptakan Karya!</h2>
+
+        <p>
+            Setiap proyek merupakan kesempatan untuk mengembangkan
+            logika, kreativitas, kemampuan pemrograman, dan keterampilan
+            memecahkan masalah. Terus belajar dan kembangkan ide
+            menjadi aplikasi yang bermanfaat.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>SMK NEGERI MOJOAGUNG</h3>
+
+        <p>Showcase Projek Siswa Rekayasa Perangkat Lunak</p>
+
+        <p class="copyright">
+            &copy; 2026 Portofolio Projek Siswa RPL
+        </p>
+    </footer>
+
+</body>
+</html>
+```
